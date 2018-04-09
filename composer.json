@@ -40,6 +40,6 @@
         }
     },
     "require": {
-        "bash-it/bash-it": "^1.0"
+        "bash-it/bash-it": "1.0.0"
     }
 }

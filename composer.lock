@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aea4122ec5e097a38bde590d4fd610fa",
+    "content-hash": "1bf24ec2388c9b5f2031120a5b1716b7",
     "packages": [
         {
             "name": "bash-it/bash-it",
@@ -123,12 +123,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dotfilesphp/core.git",
-                "reference": "86a3b8ee44bec5b3841051d3e97a9d9b25ac1a59"
+                "reference": "331c67e847cd83130f5d09cc707441d1ca742e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dotfilesphp/core/zipball/86a3b8ee44bec5b3841051d3e97a9d9b25ac1a59",
-                "reference": "86a3b8ee44bec5b3841051d3e97a9d9b25ac1a59",
+                "url": "https://api.github.com/repos/dotfilesphp/core/zipball/331c67e847cd83130f5d09cc707441d1ca742e84",
+                "reference": "331c67e847cd83130f5d09cc707441d1ca742e84",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 }
             ],
             "description": "Dotfiles Core Package",
-            "time": "2018-04-09T14:02:20+00:00"
+            "time": "2018-04-09T15:40:25+00:00"
         },
         {
             "name": "monolog/monolog",
