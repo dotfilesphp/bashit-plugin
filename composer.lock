@@ -4,18 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bf24ec2388c9b5f2031120a5b1716b7",
+    "content-hash": "41e774290e8c661f43d2c4c63a9d5777",
     "packages": [
         {
             "name": "bash-it/bash-it",
-            "version": "1.0.0",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dotfilesphp/vendor-bash-it.git",
+                "reference": "ce86102f5d2f4ce7860eb9796c3f5a52bd032625"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://codeload.github.com/Bash-it/bash-it/zip/master",
-                "reference": null,
-                "shasum": null
+                "url": "https://api.github.com/repos/dotfilesphp/vendor-bash-it/zipball/ce86102f5d2f4ce7860eb9796c3f5a52bd032625",
+                "reference": "ce86102f5d2f4ce7860eb9796c3f5a52bd032625",
+                "shasum": ""
             },
-            "type": "library"
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-composer": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthonius Munthi",
+                    "email": "me@itstoni.com"
+                }
+            ],
+            "description": "Composer package for bash-it",
+            "time": "2018-04-09T16:14:51+00:00"
         }
     ],
     "packages-dev": [
