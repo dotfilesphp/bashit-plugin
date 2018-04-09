@@ -16,6 +16,7 @@ namespace Dotfiles\Plugins\BashIt\Listeners;
 use Dotfiles\Core\Config\Config;
 use Dotfiles\Core\Event\Dispatcher;
 use Dotfiles\Core\Util\Filesystem;
+use Dotfiles\Core\Util\Toolkit;
 use Dotfiles\Plugins\Bash\Event\ReloadBashConfigEvent;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -82,7 +83,8 @@ EOC;
     private function copySource(): void
     {
         $fs = new Filesystem();
-        $source = __DIR__.'/../../../../vendor/bash-it/bash-it';
+        $base = Toolkit::getBaseDir();
+        $source = $base.'/vendor/bash-it/bash-it';
         $finder = Finder::create()
             ->in($source)
             ->ignoreVCS(true)
