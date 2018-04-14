@@ -15,16 +15,33 @@ namespace Dotfiles\Plugins\BashIt\Tests;
 
 use Dotfiles\Core\Tests\BaseTestCase;
 use Dotfiles\Plugins\BashIt\BashItPlugin;
+use Dotfiles\Plugins\BashIt\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 class BashItPluginTest extends BaseTestCase
 {
     public function testPlugin(): void
     {
         $plugin = new BashItPlugin();
-        $this->assertEquals('bashit', $plugin->getName());
+        $this->assertEquals('bash-it', $plugin->getName());
+
+        $parameters = $this->createMock(ParameterBagInterface::class);
+        $parameters->expects($this->once())
+            ->method('add')
+            ->with($this->isType('array'))
+        ;
 
         $builder = $this->createMock(ContainerBuilder::class);
+        $builder->expects($this->once())
+            ->method('getReflectionClass')
+            ->with(Configuration::class)
+            ->willReturn(new \ReflectionClass(Configuration::class))
+        ;
+        $builder->expects($this->once())
+            ->method('getParameterBag')
+            ->willReturn($parameters)
+        ;
         $builder->expects($this->once())
             ->method('fileExists')
             ->with($this->stringContains('services.yaml'))

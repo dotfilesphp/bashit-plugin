@@ -24,7 +24,7 @@ class Configuration implements DefinitionInterface
     public function getConfigTreeBuilder()
     {
         $builder = new TreeBuilder();
-        $root = $builder->root('bash_it');
+        $root = $builder->root('bash-it');
         $root
             ->children()
                 ->scalarNode('git_hosting')

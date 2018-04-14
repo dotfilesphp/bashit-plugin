@@ -12,7 +12,3 @@ declare(strict_types=1);
  */
 
 require __DIR__.'/../vendor/autoload.php';
-
-use Dotfiles\Core\Util\Toolkit;
-
-Toolkit::loadDotEnv();

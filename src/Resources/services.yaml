@@ -4,8 +4,6 @@ services:
         autoconfigure: true
         public: true
     bashit.install:
-        class: Dotfiles\Plugins\BashIt\Listeners\InstallSubscriber
-        calls:
-            - [setInstallDir, ['%dotfiles.install_dir%']]
+        class: Dotfiles\Plugins\BashIt\EventSubscriber
         tags:
-            - { name: "event_subscribers" }
+            - { name: "event_subscriber" }

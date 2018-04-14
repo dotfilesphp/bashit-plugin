@@ -10,8 +10,11 @@
         }
     ],
     "minimum-stability": "stable",
+    "require": {
+        "php": "^7.1 || ^7.2",
+        "bash-it/bash-it": "^0.1.0"
+    },
     "require-dev": {
-        "dotfiles/bash-plugin": "^1.0@dev",
         "dotfiles/core": "^1.0@dev",
         "phpunit/phpunit": "^7.1"
     },
@@ -25,8 +28,5 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
-    },
-    "require": {
-        "bash-it/bash-it": "^0.1.0"
     }
 }
