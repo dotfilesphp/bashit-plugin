@@ -25,11 +25,6 @@ use Symfony\Component\Finder\Finder;
 class EventSubscriber implements EventSubscriberInterface
 {
     /**
-     * @var Parameters
-     */
-    private $parameters;
-
-    /**
      * @var Dispatcher
      */
     private $dispatcher;
@@ -43,6 +38,10 @@ class EventSubscriber implements EventSubscriberInterface
      * @var LoggerInterface
      */
     private $logger;
+    /**
+     * @var Parameters
+     */
+    private $parameters;
 
     public function __construct(Dispatcher $dispatcher, Parameters $parameters, LoggerInterface $logger)
     {
@@ -72,7 +71,7 @@ class EventSubscriber implements EventSubscriberInterface
 # Load Bash It
 source "{$this->installDir}/bash-it.bash"
 EOC;
-        $event->addPatch('.bashrc',$patch);
+        $event->addPatch('.bashrc', $patch);
         $this->copySource();
     }
 
@@ -88,6 +87,9 @@ EOC;
     {
         $fs = new Filesystem();
         $source = __DIR__.'/../vendor/bash-it/bash-it';
+        if (!is_dir($source)) {
+            $source = getenv('DOTFILES_BACKUP_DIR').'/vendor/bash-it/bash-it';
+        }
         $finder = Finder::create()
             ->in($source)
             ->ignoreVCS(true)
