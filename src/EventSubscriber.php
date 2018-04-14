@@ -161,7 +161,7 @@ EOC;
             $this->logger->debug('+bash-config: unset <comment>MAILCHECK</comment>');
         }
 
-        $contents[] = 'source "$BASH_IT"/bash-it.sh';
+        $contents[] = 'source "$BASH_IT"/bash_it.sh';
         $contents[] = "\n";
 
         return implode("\n", $contents);
