@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Dotfiles\Plugins\BashIt\Tests;
 
-use Dotfiles\Core\Tests\BaseTestCase;
+use Dotfiles\Core\Tests\Helper\BaseTestCase;
 use Dotfiles\Plugins\BashIt\BashItPlugin;
 use Dotfiles\Plugins\BashIt\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -16,7 +16,7 @@ namespace Dotfiles\Plugins\BashIt\Tests;
 use Dotfiles\Core\Constant;
 use Dotfiles\Core\Event\Dispatcher;
 use Dotfiles\Core\Event\PatchEvent;
-use Dotfiles\Core\Tests\BaseTestCase;
+use Dotfiles\Core\Tests\Helper\BaseTestCase;
 
 class EventSubscriberTest extends BaseTestCase
 {
